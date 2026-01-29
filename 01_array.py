@@ -1,2 +1,40 @@
 # Array in Python
-# 
+# ***************
+# Collection of similar types of elements (in languages like C and C++)
+# Contiguous Memeory Allocation (in almost all the programming languages)
+# In python: elements can be homo or hetero
+# In C: int a[10];
+# In Pyhton:: 1. Python Array Module
+#             2. Python Numpy Module
+# In Python array has dynamic memory allocation
+
+from array import *
+
+# syntax-> variable_name = array('type_code', [a, r, r, a, y])
+val = array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+val2 = array('u', ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+
+print("Array 1: ")
+for i in range(len(val)):
+    print(val[i], end=' | ')
+print()
+# Inhanced for loop-> this method can also be used for printing the array
+print("Array 2:")
+for j in val:
+    print(j, end=' | ')
+print()
+
+print("Array 3:")
+for k in range((len(val2))):
+    print(val2[k], end=" | ")
+print()
+
+# check array's type code
+print(f"Type Code for Array 1: {val.typecode}")
+
+print("Array 4:")
+# Reverse the array
+val.reverse()
+for l in range(len(val)):
+    print(val[l], end=' | ')
+print()
