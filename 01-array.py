@@ -53,3 +53,47 @@ val.append(100)
 for n in range(len(val)):
     print(val[n], end=' | ')
 print()
+
+# creating new array with the elements of an old array
+print("Array 7:: Method 1:")
+copy_array = array(val.typecode, val)
+for o in range(len(copy_array)):
+    print(copy_array[o], end=' | ')
+print()
+# another method
+print("Array 7:: Method 2:")
+copy_array2 = array(val.typecode, (p*2 for p in val))
+for q in range(len(copy_array2)):
+    print(copy_array2[q], end=' | ')
+print()
+
+# delete an element of an array (using index value)
+print("Array 8:")
+# syntax-> variable_name.pop(index_value)
+copy_array2.pop(3)
+for r in range(len(copy_array2)):
+    print(copy_array2[r], end=' | ')
+print()
+# NOTE-> if no index value is passed in .pop() the last element is deleted
+
+# delete an element of an array (passing the value itself)
+copy_array2.remove(100)
+print("Array 9:")
+for s in range(len(copy_array2)):
+    print(copy_array2[s], end=' | ')
+print()
+
+# slicing of an array (in python)
+print("***"*20)
+# syntax-> variable_name = array_variable[start_index:end_index]
+abc = val[2:5]
+print(f"Array 10: {abc}")
+
+# slicing of an array (excluding some index values from last)
+abc2 = val[2:-3]
+print(f"Array 12: {abc2}")
+
+# reverse array elements (through slicing)
+abc_rev = abc2[::-1]
+print(f"Array 12: {abc_rev}")
+print("***"*20)
