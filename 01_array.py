@@ -38,3 +38,18 @@ val.reverse()
 for l in range(len(val)):
     print(val[l], end=' | ')
 print()
+
+# inserting element in an array
+# syntax-> variable_name.insert(index, value)
+val.insert(1, 50)
+print("Array 5:")
+for m in range(len(val)):
+    print(val[m], end=' | ')
+print()
+
+# inserting/appending an element at the end of an array
+print("Array 6:")
+val.append(100)
+for n in range(len(val)):
+    print(val[n], end=' | ')
+print()
